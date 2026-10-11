@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="120" viewBox="0 0 200 120">
+  <!-- Red rectangle -->
+  <rect x="0" y="0" width="200" height="120" fill="red" />
+
+  <!-- White square badge at the end (right side) -->
+  <rect x="140" y="60" width="56" height="56" rx="6" ry="6" fill="white" />
+
+  <!-- "MIT" text centered in the white square -->
+  <text x="168" y="95"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="20"
+        font-weight="700"
+        fill="red"
+        text-anchor="middle">GPLv3</text>
+</svg>
