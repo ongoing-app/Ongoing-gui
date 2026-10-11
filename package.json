@@ -1,18 +1,164 @@
 {
-  "name": "ongoing-gui",
+  "name": "@ongoing/gui",
   "version": "1.0.0",
+  "description": "Web-based GUI for the Ongoing platform — VM, server, API, and static asset integration.",
+  "keywords": [
+    "ongoing",
+    "gui",
+    "vm",
+    "web",
+    "typescript"
+  ],
+  "homepage": "https://github.com/ongoing-app/ongoing-gui#readme",
+  "bugs": {
+    "url": "https://github.com/ongoing-app/ongoing-gui/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ongoing-app/ongoing-gui.git"
+  },
+  "license": "MIT",
+  "author": "Ongoing App <hello@ongoing.app> (https://ongoing.app)",
+  "contributors": [
+    "Ongoing Contributors"
+  ],
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/ongoing-app"
+  },
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  },
+  "packageManager": "npm@10.8.2",
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -p tsconfig.build.json && vite build",
+    "preview": "vite preview",
+    "clean": "rimraf dist coverage .turbo",
+    "lint": "eslint . --ext .ts,.tsx --max-warnings 0",
+    "lint:fix": "npm run lint -- --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,json,md}\"",
+    "typecheck": "tsc --noEmit",
+    "test": "jest --passWithNoTests",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepare": "husky",
+    "prepublishOnly": "npm run clean && npm run build && npm run test",
+    "version": "npm run format && git add -A",
+    "postversion": "git push && git push --tags"
+  },
   "dependencies": {
-    "vm": "github:ongoing-app/Ongoing-vm",
-    "server": "github:ongoing-app/Ongoing-server",
-    "svgs": "github:ongoing-app/SVGs",
-    "libraries": "github:ongoing-app/libraries",
-    "home": "github:ongoing-app/ongoing-app.github.io",
-    "statistics": "github:ongoing-app/statistics",
-    "api": "github:ongoing-app/Ongoing-BackendApi",
-    "w-w-w": "github:ongoing-app/Ongoing-www"
-"devDependencies": {
-    "jest": "^29.0.0",
-    "eslint": "^8.0.0",
-    "typescript": "^5.0.0"
-  }
+    "@ongoing/vm": "github:ongoing-app/Ongoing-vm#v1.0.0",
+    "@ongoing/server": "github:ongoing-app/Ongoing-server#v1.0.0",
+    "@ongoing/svgs": "github:ongoing-app/SVGs#v1.0.0",
+    "@ongoing/libraries": "github:ongoing-app/libraries#v1.0.0",
+    "@ongoing/home": "github:ongoing-app/ongoing-app.github.io#v1.0.0",
+    "@ongoing/statistics": "github:ongoing-app/statistics#v1.0.0",
+    "@ongoing/api": "github:ongoing-app/Ongoing-BackendApi#v1.0.0",
+    "@ongoing/www": "github:ongoing-app/Ongoing-www#v1.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.14.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "@typescript-eslint/parser": "^7.16.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "husky": "^9.0.11",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
+    "rimraf": "^6.0.1",
+    "ts-jest": "^29.2.2",
+    "typescript": "^5.5.3",
+    "vite": "^5.3.3"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": false },
+    "react-dom": { "optional": false }
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.3.3"
+  },
+  "overrides": {
+    "eslint": "^8.57.0"
+  },
+  "resolutions": {
+    "typescript": "^5.5.3"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "jsdom",
+    "roots": [
+      "<rootDir>/src",
+      "<rootDir>/tests"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/**/*.d.ts"
+    ]
+  },
+  "browserslist": [
+    "defaults",
+    "not IE 11",
+    "maintained node versions"
+  ],
+  "sideEffects": [
+    "*.css"
+  ]
 }
