@@ -1,0 +1,14 @@
+{
+  "name": "ongoing-gui",
+  "version": "1.0.0",
+  "dependencies": {
+    "vm": "github:ongoing-app/Ongoing-vm",
+    "server": "github:ongoing-app/Ongoing-server",
+    "svgs": "github:ongoing-app/SVGs",
+    "libraries": "github:ongoing-app/libraries",
+    "home": "github:ongoing-app/ongoing-app.github.io",
+    "statistics": "github:ongoing-app/statistics",
+    "api": "github:ongoing-app/Ongoing-BackendApi",
+    "w-w-w": "github:ongoing-app/Ongoing-www"
+  }
+}
