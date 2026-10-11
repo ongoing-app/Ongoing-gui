@@ -10,5 +10,9 @@
     "statistics": "github:ongoing-app/statistics",
     "api": "github:ongoing-app/Ongoing-BackendApi",
     "w-w-w": "github:ongoing-app/Ongoing-www"
+"devDependencies": {
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
   }
 }
