@@ -1,15 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="120" viewBox="0 0 200 120">
-  <!-- Red rectangle -->
-  <rect x="0" y="0" width="200" height="120" fill="red" />
+<svg xmlns="http://www.w3.org/2000/svg" width="260" height="56" viewBox="0 0 260 56">
+  <!-- Red rectangle: same height as the badge (56), longer width -->
+  <rect x="0" y="0" width="260" height="56" fill="red" />
 
-  <!-- White square badge at the end (right side) -->
-  <rect x="140" y="60" width="56" height="56" rx="6" ry="6" fill="white" />
+  <!-- White square badge at the end -->
+  <rect x="204" y="0" width="56" height="56" fill="white" />
 
-  <!-- "MIT" text centered in the white square -->
-  <text x="168" y="95"
+  <!-- "MIT" text centered in the square -->
+  <text x="232" y="35"
         font-family="Arial, Helvetica, sans-serif"
         font-size="20"
         font-weight="700"
         fill="red"
-        text-anchor="middle">GPLv3</text>
+        text-anchor="middle">MIT</text>
 </svg>
