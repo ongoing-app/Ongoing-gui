@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 140" width="100" height="140">
+  <!-- Pole -->
+  <rect x="18" y="10" width="5" height="120" fill="#8B5A2B" rx="2" />
+  <!-- Pole top ball -->
+  <circle cx="20.5" cy="10" r="4.5" fill="#FFD700" />
+  <!-- Flag (shorter width) -->
+  <path d="M23 20 L75 28 L75 72 L23 80 Z" fill="#1E90FF" />
+</svg>
