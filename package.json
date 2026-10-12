@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/ongoing-app/ongoing-gui.git"
   },
-  "license": "MIT",
+  "license": "GPL-3.0-or-later",
   "author": "Ongoing App <hello@ongoing.app> (https://ongoing.app)",
   "contributors": [
     "Ongoing Contributors"
