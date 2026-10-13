@@ -1,0 +1,24 @@
+<!doctype html>
+  <html>
+   <head>
+    <meta charset="utf8">
+    <title>Ongoing — Project</title>
+   </head>
+   <body>
+<button onclick="goFullscreen()">View</button>
+<iframe id="myFrame" src="https://ongoing.app/projects/692834"></iframe>
+
+<script>
+function goFullscreen() {
+  const el = document.getElementById('myFrame');
+  if (el.requestFullscreen) {
+    el.requestFullscreen();
+  } else if (el.webkitRequestFullscreen) {
+    el.webkitRequestFullscreen(); // Safari
+  } else if (el.msRequestFullscreen) {
+    el.msRequestFullscreen(); // old Edge/IE
+  }
+}
+</script>
+   </body>
+</html>
