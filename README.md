@@ -6,3 +6,6 @@ Hello! This is the official GUI repo for Ongoing. Would you like to fork this? W
 # Steps
 
 - The repos you need to fork: All of the repos in the org.
+
+> [!CAUTION]
+Ongoing-gui is still in an early stage. Expect bugs, problems, and fixes.
